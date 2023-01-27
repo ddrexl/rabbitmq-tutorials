@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  devcontainer:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    network_mode: service:rabbitmq
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:cached
+      # Forwards the local Docker socket to the container.
+      # - /var/run/docker.sock:/var/run/docker-host.sock
+      # TODO requires a devcontainer image that has docker installed
+    # Overrides default command so things don't shut down after the process ends.
+    # entrypoint: /usr/local/share/docker-init.sh
+
+  rabbitmq:
+    hostname: "rabbitmq"
+    image: rabbitmq:3.11-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
