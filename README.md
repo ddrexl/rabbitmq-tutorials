@@ -1,17 +1,28 @@
-# RabbitMQ Tutorials Codespace
+# RabbitMQ Tutorials Codespaces
 
 This project allows you to interactively inspect and run the [Rabbit MQ
-Tutorials](https://www.rabbitmq.com/getstarted.html)
+Tutorials](https://www.rabbitmq.com/getstarted.html) from a local docker
+development container or from Github Codespaces.
 
 ## Prerequisites
 
+### Local Docker Development Container
+
 - Install [Visual Studio Code](https://code.visualstudio.com/download).
 - Install the VS Code [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) Extension Pack.
-- Setup a Docker runtime, for example in Windows Subsystem for Linux 2 (WSL2):
+- If you are on Windows, install a Windows Subsystem for Linux 2
+  (WSL2) with Ubuntu:
 	- Enable WSL2 by following the [WSL2 installation guide](https://learn.microsoft.com/windows/wsl/install).
 	- Install Ubuntu (or your preferred Linux distribution) from the [Microsoft store](https://www.microsoft.com/p/ubuntu/9nblggh4msv6).
-	- Install [Docker in
-	Ubuntu](https://docs.docker.com/engine/install/ubuntu/) WSL2.
+- Install [Docker in
+Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
+### Github Codespaces
+
+On the [repo
+page](https://github.com/dominik-drexl-bl/rabbitmq-tutorials), click the
+green `Code` button. In the `Codespaces` tab, click on `Create codespace
+on main`.
 
 ## Project Structure
 
